@@ -36,11 +36,3 @@ class Solution:
                 l = mid + 1 
         return S[start:start+l-1]
     
-    def find(self,s,l):
-        if len(s) < l:
-            return [False,""]
-        while len(s) > l:
-            if s[1:].find(s[:l]) > -1:
-                return [True,s[:l]]
-            s = s[1:]
-        return [False,""] 
